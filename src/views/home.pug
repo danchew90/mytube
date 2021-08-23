@@ -1,5 +1,8 @@
 extends base
+include mixin/video
 
 block content
-    div 
-        h1=pageTitle
+    each potato in videos 
+        +video(potato)
+    else 
+        h4 Sorry not found.

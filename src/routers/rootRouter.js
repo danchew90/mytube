@@ -9,9 +9,9 @@ import { getSearch, home } from "../controllers/videoController";
 
 const rootRouter = express.Router();
 
-app.get("/", home);
-app.get("/search", getSearch);
-app.route("/login").get(getLogin).post(postLogin);
-app.route("/join").get(getJoin).post(postJoin);
+rootRouter.get("/", home);
+rootRouter.route("/login").get(getLogin).post(postLogin);
+rootRouter.route("/join").get(getJoin).post(postJoin);
+rootRouter.get("/search", getSearch);
 
 export default rootRouter;
